@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 26px;
+    background-color: var(--#4287f5);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 40px);
+    padding: 20px;
+}
+
+.title {
+    font-size: 16px;
+    color: #6c63ff;
+    font-weight: 800;
+}
+
+.text {
+    font-size: 14px;
+    color: #686868;
+}
+
+input[type="button"] {
+    background-color: #6c63ff;
+    border: none;
+    padding: 10px 14px;
+    color: white;
+    border-radius: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #574ffc;
+}
+
+.countdown {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: center;
+    
+}
+
+.footer-social {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 36px;
+}
+
+.footer-social img {
+    width: 20px; /* ajuste o tamanho conforme necessário */
+    height: 20px; /* ajuste o tamanho conforme necessário */
+}
+
+
+@media only screen and (max-width: 480px) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .content {
+        height: 100%;
+        padding: 6px;
+    }
+
+    .content:first-of-type {
+        order: 2; /* faz com que a imagem fique acima do contador para display mobile */
+                  /* ou seja, no layout do display flex, lê-se da esquerda para a direita
+                     então, a segunda coluna vem acima da primeira*/
+    }
+
+    .countdown {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 0px;
+    }
+
+    img {
+        max-width: 180px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .title {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .countdown {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 0px;
+    }
+}
+
